@@ -1,0 +1,549 @@
+/*********************************************/
+/*****                                   *****/
+/*****  Documento CSS                    *****/
+/*****                                   *****/
+/*****  Fecha: 08/12/2017                *****/
+/*****  Actualizacion: 06/06/2024        *****/
+/*****  Autor: Dulayne Rosales           *****/
+/*****                                   *****/
+/*********************************************/
+
+@import "https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap";
+@import "https://fonts.googleapis.com/css?family=Indie+Flower";
+
+/*********************************************/
+:root {
+    --basic: #252525;
+    --purple: #633894;
+    --secondary-purple: #824274;
+    --soft-blue: #8FA3E9;
+    --yellow: #FFAC32;
+    --gray: #D6D6D6;
+    --white: #FFFFFF;
+}
+
+* {
+    box-sizing: border-box;  
+    margin: 0;
+    padding: 0;
+}
+
+a, a:hover, a:focus, .btn:focus {
+    text-decoration: none;
+    outline: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--basic);
+}
+
+.up {
+    display: none;
+    background-repeat: no-repeat;
+    font-size:2.0rem;
+    color: var(--blue);
+    cursor: pointer;
+    position: fixed;
+    bottom: 28px;
+    right: 0px;
+    z-index: 1001; 
+    text-shadow: var(--white) 0 -2px;
+}
+
+html {
+    font-size: 79.5%;
+   
+    line-height: 24px;
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    color: var(--basic);
+    min-height: 100vh;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.main-header .top-bar {
+    background-color: var(--purple);
+    font-size: 1.2rem;
+}
+
+.social-icons a {
+    color: var(--white);
+    margin-left: 10px;
+    font-size: 1.4rem;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: var(--yellow);
+}
+
+.main-navbar {
+  background-color: rgba(255, 255, 255, 0.9);
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.main-navbar.sticky-top.scrolled {
+  background-color: var(--white);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.main-navbar.sticky-top ul li a {
+  font-size: 1.4rem;
+}
+
+.btn-cta {
+  background-color: var(--yellow);
+  color: var(--white);
+  border-radius: 50px;
+  padding: 0.4rem 1.4rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-cta:hover {
+  background-color: var(--secondary-purple);
+  color: var(--white);
+}
+
+/* .hero-banner {
+  min-height: 100vh;
+  background: linear-gradient(to right, var(--soft-blue), var(--secondary-purple));
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+} */
+
+.hero-banner {
+  min-height: 100vh;
+  background: linear-gradient(to right, var(--soft-blue), var(--secondary-purple));
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero-shape {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  line-height: 0; /* elimina espacios fantasma */
+}
+
+.hero-shape svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-bottom: -2px; /* empuja la curva para tapar el hueco */
+}
+
+
+
+.hero-banner h1 {
+  font-family: 'Indie Flower', cursive;
+  font-size: 3.5rem;
+  line-height: 1.3;
+}
+
+.hero-banner p {
+  font-size: 1.4rem;
+}
+
+.hero-banner .btn-cta {
+  background-color: var(--yellow);
+  border: none;
+  font-size: 1.2rem;
+  border-radius: 30px;
+  padding: 0.7rem 1.6rem;
+}
+
+.hero-shape {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  line-height: 0;
+}
+
+.globo {
+  position: absolute;
+  z-index: 2;
+  width: 240px;
+  animation: flotar 6s ease-in-out infinite;
+}
+
+.globo-1 {
+  top: 20%;
+  left: 8%;
+  animation-delay: 0s;
+  display: none;
+}
+
+.globo-2 {
+  top: 20%;
+  right: 8%;
+  animation-delay: 1.5s;
+  display: none;
+}
+
+@keyframes flotar {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-15px); }
+  100% { transform: translateY(0px); }
+}
+
+.text-purple {
+  color: var(--purple);
+}
+
+.text-yellow {
+  color: var(--yellow);
+}
+
+/*********************************************/
+/*****              HOME                ******/
+/*********************************************/
+
+.register_container {
+    background-color: var(--soft-blue);
+    color: var(--white);
+}
+
+.register_container h2{
+    font-size: 2.8rem;
+    color: var(--white);
+}
+
+.register_container a{
+   text-transform: uppercase;
+} 
+
+.register_container .btn-cta {
+  background-color: var(--yellow);
+  border: none;
+  font-size: 1.2rem;
+  border-radius: 30px;
+  padding: 0.7rem 1.6rem;
+}
+
+/**gallery**/
+
+.gallery_events h2 {
+    font-size: 3.2rem;
+    font-family: 'Indie Flower', sans-serif; 
+}
+
+.gallery_events .btn {
+    border-color: var(--secondary-purple);
+    color: var(--secondary-purple);
+    font-weight: bold;
+    margin: 5px;
+}
+
+.gallery_events .btn:hover {
+    background-color: var(--secondary-purple);
+    color: var(--white);
+}
+
+.gallery_events .gallery-item {
+  display: block;
+  transition: transform 0.3s ease;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.gallery_events .gallery-item img {
+  transition: transform 0.3s ease;
+
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.05);
+}
+
+.gallery_events .overlay {
+  position: absolute;
+  bottom: 0;
+  background: rgba(0,0,0,0.6);
+  width: 100%;
+  padding: 0.5rem;
+  transition: 0.3s ease;
+  font-size: 1.6rem;
+}
+
+.gallery-item {
+  opacity: 1;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.gallery-item p{
+  font-size: 1.9rem;
+}
+
+.gallery-item.hidden {
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  transform: scale(0.95);
+}
+
+.filter-btn.active {
+  background-color: var(--purple);
+  color: var(--white);
+}
+
+
+/*********************************************/
+/*****       Internas       ******************/
+/*********************************************/
+
+.banner-internal {
+    background-image: url("../img/bg02.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    min-width: 220px;
+   
+    position: relative;
+}
+
+.overlay {
+    position: absolute;   
+    width: 100%;
+    top: 0;    
+    background-color: #000;   
+    opacity: 0.5;
+    height: 100%;
+    z-index: 1;
+}
+
+.banner_title--incontainer {
+    min-width: 288px;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    min-height: 200px;
+}
+
+.banner_title--incontainer h1 {
+    font-size: 2.9rem;
+    color:var(--white);
+    padding-top: 60px;
+    font-weight: bold;
+    font-family: 'Indie Flower', sans-serif;
+}
+
+
+.main_content--internal {
+    margin-top: -40px; /* Esto lo sube sobre el banner */
+    position: relative;
+    z-index: 5;
+    background-color: var(--white);
+    border-top-left-radius: 20rem;
+    border-top-right-radius: 20rem;
+    box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.15);
+    padding: 1.5rem 1rem;
+    border-top: solid 20px var(--purple);
+    background-image: url("../img/bg_internal.jpg");
+}
+
+.main_content--internal .lead {
+  font-size: 1.4rem;
+  color: var(--basic);
+}
+
+.main_content--internal .title {
+    font-size: 2.1rem;
+    color: var(--purple);
+    font-family: 'Indie Flower', sans-serif;
+}
+
+.main_content--internal i {
+  font-size: 3.9rem;
+  color: var(--yellow);
+}
+
+.service-card {
+  background: var(--white);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  border-color: var(--secondary-purple); 
+}
+
+.service-card img {
+  max-height: 220px;
+  object-fit: cover;
+}
+
+.service-card h5 {
+  color: var(--purple); 
+}
+
+.service-card p {
+  font-size: 0.95rem;
+}
+
+
+/*********************************************/
+/*****       FOOTER         ******************/
+/*********************************************/
+.footer {
+    line-height: 1.6;
+    background-color: var(--yellow);
+}
+
+.footer h5 {
+    font-size: 1.8rem;
+    font-family: 'Indie Flower', sans-serif; 
+}
+
+.footer .border-divider {
+    width: 2px;
+    background-color: var(--white) ;
+    height: 100px;
+    margin: 0 1rem;
+}
+
+.footer .footer-social ul {
+    list-style: outside none none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+  
+.footer .footer-social ul li {
+    display: inline-block;
+    margin: 0 5px;
+}
+  
+.footer .footer-social ul li a {
+    color: var(--white);
+    font-size: 1.9rem;
+    display: block;
+
+    -webkit-transition: all 0.2s ease 0s;
+        -moz-transition: all 0.2s ease 0s;
+         -ms-transition: all 0.2s ease 0s;
+          -o-transition: all 0.2s ease 0s;
+             transition: all 0.2s ease 0s;
+}
+  
+
+/* Imagen utilizada en pantallas de anchura 480 px y superior */
+@media (min-width: 480px) {
+
+    .banner_title--container h1 {
+        font-size: 6.9rem;
+    }
+
+    .main_services .col-10 {
+		  max-width: 45%;
+	  }
+}
+
+
+
+/* Imagen utilizada en pantallas de anchura 768 px y superior */
+@media (min-width: 768px) {
+  
+
+    .hero-banner h1 {
+      font-size: 5rem;
+    }
+
+    .hero-banner p {
+      font-size: 1.6rem;
+    }
+
+    .main_services .row {
+		  flex-wrap: nowrap;
+	  }
+
+    .main_services .col-10 {
+      max-width: 30%;
+    }
+
+    .main_services {
+      top: 85%;
+    }
+
+    .gallery_events .btn {
+        font-size: 1.4rem;
+    }
+
+    .footer .border-md-end {
+        border-right: none !important;
+    } 
+
+     /* Línea divisoria entre columnas (solo en desktop) */
+    .border-divider {
+        width: 1px;
+        background-color: rgba(255, 255, 255, 0.3);
+        height: 100%;
+        margin: 0 1rem;
+    }
+
+}
+
+/* Imagen utilizada en pantallas de anchura 1200 px y superior */
+@media (min-width: 1200px) {
+
+    .main_services img {
+      width: 180px;
+      height: 180px;
+	  }
+
+    .banner_title--incontainer h1 {
+        font-size: 4.9rem;
+    }
+
+    .globo-1 {
+      display: block;
+    }
+
+    .globo-2 {
+      display: block;
+    }
+
+    .register_container p{
+        font-size: 1.8rem;
+    }
+
+    .main_content--internal span, .main_content--internal p{
+        font-size: 1.6rem;
+    }
+
+    .main_content--internal  h1{
+        font-weight: bold;
+        font-size: 2.9rem;
+    }
+
+    .main_content--internal .title {
+        font-size: 2.6rem;
+    }
+
+}
